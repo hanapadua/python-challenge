@@ -9,7 +9,7 @@ with open(path) as csvfile:
     print(csvreader)
     next(csvreader)
 
-#Creating a list for each column and print the  
+#Creating a list for each column and print   
     dates=[]
     Prof_loss=[]
     for row in csvreader:
