@@ -9,22 +9,30 @@ with open(pollpath) as csvfile:
     next(csvreader)
 
 #Creating columns and rows from Voter ID, County, and Candidate
-    id=[]
-    county=[]
-    candidate=[]
-    for row in csvreader:
-        id.append(row[0])
-        county.append(row[1])
-        candidate.append(row[2])
+
 
 
 #Creating Polling dictionary
 polling = {}
 # Find total # of votes cast
-    for row in csvreader:
+for row in csvreader:
         rnum +=1
 
         if row[2] in polling:
             polling[row[2]] +=1
-    else:
-        polling[row[2]] =1
+else:
+        polling[row[2]] = 1
+
+total_votes=rnum
+print('------------------------------------')
+print(f'Total Votes: {total_votes')
+print('------------------------------------')
+
+for word in polling:
+    print (f'{word}: {round((polling[word]/rnum*100),2)}00% ({int(polling[word])})')
+
+
+m=max(polling, key=polling.get
+print('------------------------------')
+print(f'Winner:    {m}')
+print('------------------------------')
