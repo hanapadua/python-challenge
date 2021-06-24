@@ -17,7 +17,10 @@ with open(pollpath) as csvfile:
     print(csvreader)
     next(csvreader)
 
+<<<<<<< HEAD
 #skip header
+=======
+>>>>>>> cb3ff56efcd1511b1ab486a341050d8e05fb93b3
     header = next(csvreader)
 # Find total # of votes cast
     for row in csvreader:

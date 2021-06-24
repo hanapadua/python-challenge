@@ -8,6 +8,8 @@ with open(path) as csvfile:
     csvreader = csv.reader(csvfile, delimiter= ',')
     print(csvreader)
     next(csvreader)
+    
+    header = next(csvreader)
 
     header = next(csvreader)
 
