@@ -18,7 +18,7 @@ with open(pollpath) as csvfile:
     next(csvreader)
 
 #skip header
-    next(csvreader)
+    header = next(csvreader)
 # Find total # of votes cast
     for row in csvreader:
         rnumber +=1
@@ -36,10 +36,13 @@ print('------------------------------------')
 print(f'Total Votes: {total_votes}')
 print('------------------------------------')
 
+#Creating dictionary that has keys with candidates names and # of votes cast
+#Print list of candidates who ran
+#The percentage of votes each candidate received 
 for word in polling:
         print (f'{word}: {round((polling[word]/rnumber*100),2)}00% ({int(polling[word])})')
 
-
+#Print winner of the election based on popular vote
 m=max(polling, key=polling.get)
 print('------------------------------')
 print(f'Winner:    {m}')
