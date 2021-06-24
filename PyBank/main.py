@@ -8,6 +8,8 @@ with open(path) as csvfile:
     csvreader = csv.reader(csvfile, delimiter= ',')
     print(csvreader)
     next(csvreader)
+    
+    header = next(csvreader)
 
 #Creating a list for each column and print   
     dates=[]
@@ -19,6 +21,8 @@ with open(path) as csvfile:
     print(Prof_loss)
 
         #Find the total months
+    print(" ")
+    print(" ")
     print("Financial Analysis")
     print("----------------------------------")
     print("Total Months:",len(dates))
