@@ -17,8 +17,7 @@ with open(pollpath) as csvfile:
     print(csvreader)
     next(csvreader)
 
-#skip header
-    next(csvreader)
+    header = next(csvreader)
 # Find total # of votes cast
     for row in csvreader:
         rnumber +=1
